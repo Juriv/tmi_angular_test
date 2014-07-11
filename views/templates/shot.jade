@@ -1,0 +1,8 @@
+li.thumbnail
+    img(ng-src='{{image.url}}')
+    .info
+        .title {{image.title}}
+        .author
+            | {{'imageInfo:by' | translate}}&nbsp;
+            a(class='author-name' href='#') {{image.author}}
+            a(class='download' target='_blank' href='{{image.url}}') {{'imageInfo:Download' | translate}}

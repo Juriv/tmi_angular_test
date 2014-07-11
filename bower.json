@@ -1,0 +1,18 @@
+{
+  "author": "",
+  "name": "project",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "",
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-loader": "1.2.x",
+    "angular-mocks": "~1.2.x",
+    "angular-route": "*",
+    "angular-translate": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.19"
+  }
+}

@@ -1,0 +1,23 @@
+ol.pagination
+    li
+        a(ng-click="changeLang('en_US')") English
+    li
+        a(ng-click="changeLang('ru_RU')") Русский
+
+ol.thumbnails
+    shot(ng-repeat="image in images")
+
+ol.pagination
+    li
+        a(href="/page-1" ng-class="{'disabled':currentPage == 1}") {{'pagination:First' | translate}}
+    li
+        a(href="/page-{{prevPage}}" ng-class="{'disabled':( currentPage - 1 ) < 1}") {{'pagination:Prev' | translate}}
+
+    li(ng-repeat="pageIndex in pageNavigationButtons")
+            a(href="/page-{{pageIndex}}" ng-class="{'current':pageIndex == currentPage}")
+                | {{pageIndex}}
+
+    li
+        a(href="/page-{{nextPage}}" ng-class="{'disabled':currentPage + 1 > lastPage}") {{'pagination:Next' | translate}}
+    li
+        a(href="/page-{{lastPage}}" ng-class="{'disabled':currentPage == lastPage}") {{'pagination:Last' | translate}}

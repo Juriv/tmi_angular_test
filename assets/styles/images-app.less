@@ -1,0 +1,92 @@
+@import "layout-parameters";
+@import "pagination";
+
+.thumbnails {
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+
+  .thumbnail {
+    background: url(/images/preloader.gif) no-repeat center;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    display: inline-block;
+    height: 212px;
+    margin: 0 10px 8px 0;
+    padding: 9px;
+    position: relative;
+    width: 212px;
+
+    &:hover {
+      border: 1px dashed #b5c4d1;
+
+      .info {
+        background: #0b759c;
+        background: rgba(11, 117, 156, .9);
+        border: 1px solid #0e6280;
+        border-radius: inherit;
+        display: block;
+        height: 100%;
+        left: -1px;
+        position: absolute;
+        text-align: center;
+        top: -1px;
+        width: 100%;
+
+        .title {
+          color: #fff;
+          font-size: 28px;
+          text-shadow: 0 2px 1px rgba(0, 0, 0, .5);
+          margin: 38px 21px 0;
+          max-height: 66px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .author {
+          color: #a9bcc8;
+          font-size: 18px;
+          margin: 11px 21px 0;
+
+          a {
+            color: #29d0e9;
+            text-decoration: underline;
+          }
+        }
+        a.download {
+          background: #fff url(/images/download.png) no-repeat 12px 8px;
+          border: 1px solid #0e6280;
+          border-radius: 5px;
+          color: #45484d;
+          cursor: pointer;
+          display: inline-block;
+          font: bold 16px "Myriad Pro";
+          margin-top: 24px;
+          outline: none;
+          padding: 9px 13px 9px 43px;
+          text-decoration: none;
+
+          &:hover, &:active {
+            background-position: 12px -42px;
+          }
+          &:active {
+            background-color: #d9d9d9;
+          }
+        }
+      }
+    }
+
+    img {
+      height: 100%;
+      opacity: 1;
+      -webkit-transition: opacity .3s ease;
+      width: 100%;
+    }
+    img.hide {
+      opacity: 0;
+    }
+
+    .info {
+      display: none;
+    }
+  }
+}

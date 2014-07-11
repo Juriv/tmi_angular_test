@@ -1,0 +1,8 @@
+extends layout
+
+block header
+    link(href='/styles/images-app.css' rel='stylesheet' type='text/css')
+    script(src="/js/app.js")
+
+block content
+    shot-app(ng-view)
